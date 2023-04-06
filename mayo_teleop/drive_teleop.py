@@ -62,8 +62,6 @@ class DriveTeleop(Node):
         if msg.buttons[3]: # Square, close forks
             if self.fork_positioner_position < self.fork_positioner_max:
                 self.fork_positioner_position += self.fork_positioner_speed
-                self.left_position = -self.fork_positioner_position
-                self.right_position = self.fork_positioner_position
         if msg.buttons[1]: # Circle, open forks
             if self.fork_positioner_position > self.lifting_mechanism_min:
                 self.fork_positioner_position -= self.fork_positioner_speed
